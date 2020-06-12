@@ -1,0 +1,56 @@
+<!DOCTYPE html> 
+<html ng-app="moduleApp">
+	<head>
+		<title>PushPROS - Front-end test</title>
+
+		<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+		<meta content="utf-8" http-equiv="encoding">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<link type="text/css" rel="stylesheet" href="css/script.css" />
+		<link type="text/css" rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css" /> 
+		<link type="text/css" rel="stylesheet" href="lib/angular-loadingbar/loading-bar.min.css" />  
+	</head>
+
+	<body ng-controller="indexCtrl">		
+		<!-- SCRIPT LIBS -->
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 col-sm-12">
+					<h1>Frot End test - Matheus F. (Matt)</h1>
+					
+					<button type="button" class="btn btn-dark" ng-click="showData();">Data Request</button>
+					
+					<table class="table table-dark mt-2">
+						<thead>
+						  <tr>
+							<th scope="col">Row</th>
+							<th scope="col">ID</th>
+							<th scope="col">Name</th>
+							<th scope="col">URL</th>
+							<th scope="col">UID</th>
+						  </tr>
+						</thead>
+						<tbody class="check-element" ng-hide="IsVisible == false" ng-show="IsVisible == true">
+							<tr ng-repeat="site in contents">
+								<th scope="row">{{$index}}</th>
+								<td>{{site.id}}</td>
+								<td>{{site.name}}</td>
+								<td>{{site.url}}</td>
+								<td>{{site.uid}}</td>
+							</tr>
+						</div>	
+						</tbody>
+					  </table>
+				</div>
+			</div>
+		</div>
+		
+		<script type="text/javascript" src="lib/angular/angular.min.js"></script>
+		<script type="text/javascript" src="js/app.js"></script>
+		<script type="text/javascript" src="js/indexCtrl.js"></script>
+		<script type="text/javascript" src="lib/jquery/dist/jquery.min.js"></script>
+		<script type="text/javascript" src="lib/bootstrap/js/bootstrap.min.js"></script>
+
+	</body>
+</html>	
